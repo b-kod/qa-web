@@ -1,4 +1,5 @@
 package demoqa;
+import com.codeborne.selenide.selector.ByText;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.*;
@@ -13,7 +14,7 @@ public class GithubTest {
         $("#wiki-body").shouldHave(text("Soft assertions"));
         $("#wiki-body ul li a", 6).shouldHave(attribute("href", "https://github.com/selenide/selenide/wiki/SoftAssertions"));
         $("#wiki-body ul li a", 6).click();
-        $("#wiki-body").shouldHave(text("Using JUnit5 extend test class"),
-                text("@ExtendWith({SoftAssertsExtension.class})"));
+        $("#wiki-body ol", 3).shouldHave(text("Using JUnit5 extend test class"));
+        $("#wiki-body pre", 4).shouldHave(text("@ExtendWith({SoftAssertsExtension.class})"));
     }
 }
