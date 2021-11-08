@@ -1,4 +1,4 @@
-package demoqa;
+package demoqa.examples;
 import com.codeborne.selenide.selector.ByText;
 import org.junit.jupiter.api.Test;
 
