@@ -5,12 +5,20 @@ public class Robots {
     String exploitationPeriod;
     boolean incidentsWithHuman;
     String incidentsDescription;
+    Characteristics characteristics;
 
-    public void sayModel() {
+    public Robots(String model, String exploitationPeriod, boolean incidentsWithHuman, String incidentsDescription) {
+        this.model = model;
+        this.exploitationPeriod = exploitationPeriod;
+        this.incidentsWithHuman = incidentsWithHuman;
+        this.incidentsDescription = incidentsDescription;
+    }
+
+    public void printModel() {
         System.out.println("Model: " + model);
     }
 
-    public void sayPeriodOfExploitation() {
+    public void printPeriodOfExploitation() {
         System.out.println("The exploitation period is " + exploitationPeriod + " years");
     }
 
@@ -22,33 +30,37 @@ public class Robots {
         }
     }
 
-    public void whatHappened() {
+    public void printWhatHappened() {
         System.out.println("Detected incidents are: " + incidentsDescription);
     }
 
-    public static void main(String[] args) {
-        Robots modelZ2 = new Robots();
-        modelZ2.model = "Z2";
-        modelZ2.exploitationPeriod = "25";
-        modelZ2.incidentsWithHuman = true;
-        modelZ2.incidentsDescription = "The robot bitten 20 owners";
+    static class Characteristics {
+        int intelligence;
+        int sensePerception;
+        int dexterity;
+        int power;
 
-        Robots modelBB8 = new Robots();
-        modelBB8.model = "BB8";
-        modelBB8.exploitationPeriod = "45";
-        modelBB8.incidentsWithHuman = false;
-        modelBB8.incidentsDescription = "No incidents. BB8 loves human";
+        public Characteristics(int intelligence, int sensePerception, int dexterity, int power) {
+            this.intelligence = intelligence;
+            this.sensePerception = sensePerception;
+            this.dexterity = dexterity;
+            this.power = power;
+        }
 
-        modelZ2.sayModel();
-        modelZ2.sayPeriodOfExploitation();
-        modelZ2.areThereAnyIncidentsWithPeople();
-        modelZ2.whatHappened();
+        public void printIntelligenceLevel() {
+            System.out.println("Intelligence: " + intelligence);
+        }
 
-        modelBB8.sayModel();
-        modelBB8.sayPeriodOfExploitation();
-        modelBB8.areThereAnyIncidentsWithPeople();
-        modelBB8.whatHappened();
+        public void printSensePerceptionLevel() {
+            System.out.println("Sense perception: " + sensePerception);
+        }
 
+        public void printDexterityLevel() {
+            System.out.println("Dexterity: " + dexterity);
+        }
+
+        public void printPowerLevel() {
+            System.out.println("Power: " + power);
+        }
     }
-
 }
