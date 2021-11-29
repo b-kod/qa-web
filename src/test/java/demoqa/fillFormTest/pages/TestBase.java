@@ -1,9 +1,7 @@
-package demoqa;
+package demoqa.fillFormTest.pages;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
-
-import demoqa.pages.RegistrationPage;
 
 public class TestBase {
 

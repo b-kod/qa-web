@@ -1,7 +1,6 @@
-package demoqa.pages.components;
+package demoqa.fillFormTest.pages.components;
 
 import com.codeborne.selenide.SelenideElement;
-import com.codeborne.selenide.selector.ByText;
 
 import static com.codeborne.selenide.Selenide.$;
 

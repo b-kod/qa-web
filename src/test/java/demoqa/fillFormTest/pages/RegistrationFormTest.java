@@ -1,8 +1,7 @@
-package demoqa;
-import demoqa.pages.RegistrationPage;
+package demoqa.fillFormTest.pages;
 import org.junit.jupiter.api.Test;
 
-public class RegistrationFormTest extends TestBase{
+public class RegistrationFormTest extends TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
 
     @Test

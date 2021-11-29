@@ -1,12 +1,12 @@
-package demoqa.pages;
+package demoqa.fillFormTest.pages;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Condition.*;
 import com.codeborne.selenide.SelenideElement;
-import demoqa.pages.components.CalendarComponent;
+import demoqa.fillFormTest.pages.components.CalendarComponent;
 
 import static com.codeborne.selenide.Selenide.$;
-import demoqa.pages.components.StateAndCityComponent;
+import demoqa.fillFormTest.pages.components.StateAndCityComponent;
 
 public class RegistrationPage {
     // LOCATORS
@@ -22,7 +22,7 @@ public class RegistrationPage {
                             uploadPictureWrapper = $("#uploadPicture"),
                             addressInput = $("#currentAddress"),
                             submitBtn = $("#submit"),
-                            resultsTable = $(".table-responsive");;
+                            resultsTable = $(".table-responsive");
 
     public CalendarComponent calendar = new CalendarComponent();
     public StateAndCityComponent stateAndCity = new StateAndCityComponent();
@@ -73,7 +73,7 @@ public class RegistrationPage {
     }
 
     public RegistrationPage uploadPicture(String value) {
-        uploadPictureWrapper.uploadFromClasspath(value);;
+        uploadPictureWrapper.uploadFromClasspath(value);
         return this;
     }
 

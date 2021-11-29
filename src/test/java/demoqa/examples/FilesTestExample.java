@@ -1,4 +1,4 @@
-package demoqa.filesTest;
+package demoqa.examples;
 
 import com.codeborne.pdftest.PDF;
 import com.codeborne.xlstest.XLS;
@@ -7,6 +7,7 @@ import com.opencsv.exceptions.CsvException;
 import org.apache.commons.io.IOUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.io.*;
@@ -19,7 +20,10 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class FilesTest {
+public class FilesTestExample {
+
+    @DisplayName("Download file test with absolute path")
+    @Tag("blocker")
     @Test
     void uploadFileWithAbsolutePathTest() {
         open("https://the-internet.herokuapp.com/upload");
@@ -30,6 +34,7 @@ public class FilesTest {
     }
 
     @Test
+    @DisplayName("Download file test with relative path")
     void uploadFileWithRelativePathTest() {
         open("https://the-internet.herokuapp.com/upload");
         $("input[type='file']").uploadFromClasspath("test.jpg");
