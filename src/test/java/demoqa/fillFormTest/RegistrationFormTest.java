@@ -1,7 +1,5 @@
 package demoqa.fillFormTest;
 import demoqa.fillFormTest.pages.RegistrationPage;
-import demoqa.fillFormTest.TestBase;
-import demoqa.fillFormTest.TestData;
 import org.junit.jupiter.api.Test;
 
 public class RegistrationFormTest extends TestBase {
