@@ -1,4 +1,4 @@
-package demoqa.fillFormTest.pages;
+package demoqa.fillFormTest.helpers;
 import com.github.javafaker.Faker;
 
 import java.util.Locale;
