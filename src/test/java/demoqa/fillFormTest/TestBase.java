@@ -14,7 +14,6 @@ public class TestBase {
 
     @BeforeAll
     static void beforeAll() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
         Configuration.browserSize = "1920x1080";
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
@@ -23,6 +22,8 @@ public class TestBase {
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("evableVideo", true);
         Configuration.browserCapabilities = capabilities;
+
+
     }
 
     @AfterEach
