@@ -58,8 +58,8 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage setBirthdayDate(String year, String month) {
-        calendar.setDate(year, month);
+    public RegistrationPage setBirthdayDate(String year, String month, String day) {
+        calendar.setDate(year, month, day);
         return this;
     }
     public RegistrationPage chooseSubject(String value) {

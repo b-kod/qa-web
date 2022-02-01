@@ -1,4 +1,7 @@
-package demoqa.fillFormTest.pages;
+package demoqa.fillFormTest;
+import demoqa.fillFormTest.pages.RegistrationPage;
+import demoqa.fillFormTest.TestBase;
+import demoqa.fillFormTest.TestData;
 import org.junit.jupiter.api.Test;
 
 public class RegistrationFormTest extends TestBase {
@@ -12,7 +15,7 @@ public class RegistrationFormTest extends TestBase {
                         .typeEmail(TestData.email)
                         .chooseGender("Female")
                         .typePhoneNumber(TestData.phoneNumber)
-                        .setBirthdayDate("2001", "February")
+                        .setBirthdayDate("2001", "February", "3")
                         .chooseSubject("Maths")
                         .setHobbies("Reading")
                         .uploadPicture("test.jpg")
