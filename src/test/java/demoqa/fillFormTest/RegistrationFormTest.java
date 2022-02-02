@@ -2,6 +2,7 @@ package demoqa.fillFormTest;
 import demoqa.fillFormTest.pages.RegistrationPage;
 import io.qameta.allure.Description;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import static io.qameta.allure.Allure.step;
 
@@ -11,6 +12,7 @@ public class RegistrationFormTest extends TestBase {
 
     @DisplayName("Регистрация")
     @Test
+    @Tag("registrationForm")
     @Description("Тест на заполнение формы регистрации")
     void fillFormTest() {
         step("Открываем страницу для заполнения формы https://demoqa.com/automation-practice-form", () -> {
